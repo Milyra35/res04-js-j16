@@ -5,14 +5,14 @@ let Header = {
         return {
             links : [
                 {
-                    content:"Accueil"
+                    link:"Accueil"
                 },
                 {
-                    content:"A propos"
+                    link:"A propos"
                 },
                 {
-                    content:"Contact"
-                }
+                    link:"Contact"
+                },
             ]
         }
     },
@@ -21,11 +21,7 @@ let Header = {
     },
     template: `
         <header>
-            <nav>
-                <ul>
-                    <Nav v-for="link in links" :content="link.content" />
-                </ul>
-            </nav>
+            <Nav :links="links"/>
         </header>
     `
 };
